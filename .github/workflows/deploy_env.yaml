@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   alh:
-    uses: ./.github/workflows/template.yml@main
+    uses: ./.github/workflows/template.yml
     with:
       opco: "alh"
 
