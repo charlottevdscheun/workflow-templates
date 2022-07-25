@@ -1,0 +1,13 @@
+{
+    "name": "Deploy Env",
+    "description": "Deploy Env",
+    "iconName": "example-icon",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
