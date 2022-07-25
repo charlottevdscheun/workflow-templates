@@ -1,29 +1,12 @@
-name: Deploy
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  id-token: write
-  contents: read
-
-concurrency:
-  group: deploy
-  cancel-in-progress: false
+on: [push]
 
 jobs:
-  ALH:
-    uses: ./.github/workflows/template.yml
-    with:
-      opco: "alh"
-      deploy_prd: true
-      
-  GSO:
-    uses: ./.github/workflows/template.yml
-    with:
-      opco: "gso"
-      deploy_prd: false
-  
-
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: ./.github/actions/deploy.yml
+        with:
+          opco: 'Alh'
