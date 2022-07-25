@@ -19,16 +19,7 @@ jobs:
     with:
       opco: "alh"
       deploy_prd: true
-  GGA:
-    uses: ./.github/workflows/template.yml
-    with:
-      opco: "alh"
-      deploy_prd: true
-  ETS:
-    uses: ./.github/workflows/template.yml
-    with:
-      opco: "ets"
-      deploy_prd: true
+      
   GSO:
     uses: ./.github/workflows/template.yml
     with:
