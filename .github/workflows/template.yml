@@ -8,7 +8,7 @@ on:
         type: string
       deploy_prd:
         required: true
-        type: boolean
+        type: bool
 jobs:
   deploy_acc:
     runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
       - run: echo ${{ inputs.opco }}
 
   deploy_prd:
-    if: ${{ inputs.deploy_prd }} == true
+    if: ${{ inputs.deploy_prd }}
     needs: deploy_acc
     runs-on: ubuntu-latest
     steps:
