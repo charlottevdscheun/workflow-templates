@@ -20,6 +20,7 @@ jobs:
 
   deploy_prd:
     if: ${{ inputs.deploy_prd }} == true
+    needs: deploy_acc
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
