@@ -1,0 +1,17 @@
+name: Deploy Template
+
+on:
+  workflow_call:
+    inputs:
+      opco:
+        required: true
+        type: string
+
+jobs:
+  deploy_acc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'main'
+      - run: echo ${{ inputs.opco }} 
